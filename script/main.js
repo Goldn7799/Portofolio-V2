@@ -72,7 +72,7 @@ const runs = ()=>{
       clearInterval(start)
       setTimeout(() => {
         runs()
-      }, 500);
+      }, 800);
     };
     if (key == 0){
       lock = false;
@@ -86,7 +86,7 @@ const runs = ()=>{
         text = text1;
       };
     };
-  }, 150)
+  }, 100)
 }
 runs()
 //end text animation
