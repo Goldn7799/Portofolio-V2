@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/logo.jpeg" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/e330da5781.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./styles/bootstrap-5.2.3-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>Syeif Sultoni Akbar</title>
+</head>
+<body class="bg-dark text-light n-over">
+  <!-- Navbar -->
+  <nav class="navbar navbar-dark n-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand text-light" href="#">
+        <img src="./assets/logo.jpeg" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+        Syeif Sultoni Akbar
+      </a>
+      <button onclick="sidebar()" class="navbar-toggler" id="mobile-btn">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div></div>
+      <div id="iconmed" class="d-flex text-light">
+        <div onclick="opens(1)" class="n-sosmed"><i class="fa-brands fa-instagram fa-2xl"></i></div>
+        <div onclick="opens(2)" class="n-sosmed"><i class="fa-brands fa-whatsapp fa-2xl"></i></div>
+        <div onclick="opens(3)" class="n-sosmed"><i class="fa-brands fa-facebook fa-2xl"></i></div>
+        <div onclick="opens(4)" class="n-sosmed"><i class="fa-brands fa-github fa-2xl"></i></div>
+      </div>
+    </div>
+  </nav>
+  <!-- sidebar -->
+  <div class="n-sidebar" id="sidebar">
+    <center style="margin-top: 10px;">
+      <button onclick="opens(1)" class="btn btn-dark"><i class="fa-brands fa-instagram"></i> Instagram</button>
+      <button onclick="opens(2)" class="btn btn-dark"><i class="fa-brands fa-whatsapp"></i> Whatsapp</button>
+      <button onclick="opens(3)" class="btn btn-dark"><i class="fa-brands fa-facebook"></i> Facebook</button>
+      <button onclick="opens(4)" class="btn btn-dark"><i class="fa-brands fa-github"></i> Github</button>
+    </center>
+  </div>
+  <!-- Header -->
+  <center>
+    <img class="n-icon" src="./assets/logo.jpeg" alt="Icon">
+    <h3 class="n-name" >Syeif Sultoni Akbar</h3>
+    <table>
+      <tr>
+        <td><p id="desc" >C</p></td>
+        <td><p class="cursor-desc" >|</p></td>
+      </tr>
+    </table>
+  </center>
+  <!-- Arrow -->
+  <center>
+    <i id="arrow" class="fa-solid fa-arrow-down fa-xl n-arrow"></i>
+  </center>
+  <canvas class="n-border" id="devider"></canvas>
+  <!-- Main -->
+  <div class="n-main">
+    <center>
+      <h2>About</h2>
+      <div class="anim">
+        <div class="n-about anims anim-show">
+          <canvas height="0.4" width="0"></canvas>
+          <table>
+            <tr>
+              <td><img src="./assets/logo.jpeg" alt="My Potho"></td>
+              <td><p>Halo Perkenalkan Nama Saya <b>Syeif Sultoni Akbar</b> Saya Lahir di Malang pada <b>30 Maret, 2008</b> dan Umur Saya sekarang 13 tahun, Saya Tinggal di <b>Kp.Cigalumpit RT.01 RW.07 gajah mekar, kab. Bandung, Indonesia.</b> dan Berpengalaman <b>2 Tahun</b> menjadi Programmer. Salam Kenal👋🏻</p></td>
+            </tr>
+          </table>
+          <canvas height="0.5" width="0"></canvas>
+        </div>
+      </div>
+      <h2 style="margin-top: 50px;">Skills</h2>
+      <div class="skill">
+        <div class="n-skills skill-anim skill-show">
+          <canvas height="0.5" width="0"></canvas>
+          <table>
+            <tr>
+              <td><img src="./assets/html.png" alt="HTML"></td>
+              <td><img src="./assets/react.png" alt="ReactJS"></td>
+              <td><img src="./assets/bash.png" alt="Bash"></td>
+            </tr>
+            <tr>
+              <td><img src="./assets/css.png" alt="CSS"></td>
+              <td><img src="./assets/javascript.png" alt="Java Script"></td>
+              <td><img src="./assets/node.png" alt="NodeJS"></td>
+            </tr>
+            <tr>
+              <td><img src="./assets/cpp.png" alt="Cpp"></td>
+              <td><img src="./assets/python.webp" alt="Python"></td>
+              <td><img src="./assets/bootstrap.png" alt="Bootstrap"></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><img src="./assets/php.png" alt="PHP"></td>
+            </tr>
+          </table>
+          <canvas height="0.4" width="0"></canvas>
+        </div>
+      </div>
+      <h2 style="margin-top: 50px;">Project</h2>
+      <div class="project">
+        <div class="project-anim project-show">
+          <table class="n-card">
+            <tr>
+              <td><div onclick="opens(5)" class="card n-dark text-light" style="width: 18rem;">
+                <img src="./assets/Riverz.png" class="card-img-top" alt="Screenshot Riverz">
+                <div class="card-body">
+                  <h5 class="card-title">Riverz</h5>
+                  <p class="card-text">Website Chat dengan Realtime Database</p>
+                </div>
+              </div></td>
+              <td><div onclick="opens(6)" class="card n-dark text-light" style="width: 18rem;">
+                <img src="./assets/MyShell.png" class="card-img-top" alt="Screenshot Riverz">
+                <div class="card-body">
+                  <h5 class="card-title">My Shell</h5>
+                  <p class="card-text">Linux Evernioment dengan nodejs dan berisi tools yang berguna</p>
+                </div>
+              </div></td>
+              <td><div  onclick="opens(7)" class="card n-dark text-light" style="width: 18rem;">
+                <img src="./assets/Portofolio.png" class="card-img-top" alt="Screenshot Riverz">
+                <div class="card-body">
+                  <h5 class="card-title">Portofolio</h5>
+                  <p class="card-text">Tidak lain adalah web ini</p>
+                </div>
+              </div></td>
+              <td><div onclick="opens(8)" class="card n-dark text-light" style="width: 18rem;">
+                <img src="./assets/Mtk.png" class="card-img-top" alt="Screenshot Riverz">
+                <div class="card-body">
+                  <h5 class="card-title">Mtk Python</h5>
+                  <p class="card-text">Alat Hitung volume dengan python</p>
+                </div>
+              </div></td>
+            </tr>
+            <tr>
+              <td><div onclick="opens(9)" class="card n-dark text-light" style="width: 18rem;">
+                <img src="./assets/sgstudio.png" class="card-img-top" alt="Screenshot Riverz">
+                <div class="card-body">
+                  <h5 class="card-title">Sg Studio</h5>
+                  <p class="card-text">Komunitas Games dan tempat Nongkrong</p>
+                </div>
+              </div></td>
+              <td><div onclick="opens(10)" class="card n-dark text-light" style="width: 18rem;">
+                <img src="./assets/gwbm.png" class="card-img-top" alt="Screenshot Riverz">
+                <div class="card-body">
+                  <h5 class="card-title">Games Wabot Monitor</h5>
+                  <p class="card-text">website untuk monitoring bot wa</p>
+                </div>
+              </div></td>
+              <td><div onclick="opens(11)" class="card n-dark text-light" style="width: 18rem;">
+                <img src="./assets/gatotkaca.png" class="card-img-top" alt="Screenshot Riverz">
+                <div class="card-body">
+                  <h5 class="card-title">Gatotkaca</h5>
+                  <p class="card-text">Hanya Website Experiment</p>
+                </div>
+              </div></td>
+              <td><div onclick="opens(12)" class="card n-dark text-light" style="width: 18rem;">
+                <img src="./assets/sgbrowser.png" class="card-img-top" alt="Screenshot Riverz">
+                <div class="card-body">
+                  <h5 class="card-title">SG Browser</h5>
+                  <p class="card-text">Browser Jaman Majapahit</p>
+                </div>
+              </div></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <h2 style="margin-top: 50px;">Hobby</h2>
+      <div class="hobby">
+        <div class="hobby-anim hobby-show">
+          <table class="n-card">
+            <tr>
+              <td><div class="card n-dark text-light" style="width: 18rem;">
+                <img src="./assets/batminton.jpg" class="card-img-top" alt="Screenshot Riverz">
+                <div class="card-body">
+                  <h5 class="card-title">Batminton</h5>
+                  <p class="card-text">Saya Suka bermain Batminton</p>
+                </div>
+              </div></td>
+              <td><div class="card n-dark text-light" style="width: 18rem;">
+                <img src="./assets/games.jpeg" class="card-img-top" alt="Screenshot Riverz">
+                <div class="card-body">
+                  <h5 class="card-title">Games</h5>
+                  <p class="card-text">Game Favorit Saya adalah Minecraft</p>
+                </div>
+              </div></td>
+              <td><div class="card n-dark text-light" style="width: 18rem;">
+                <img src="./assets/coding.jpeg" class="card-img-top" alt="Screenshot Riverz">
+                <div class="card-body">
+                  <h5 class="card-title">Coding</h5>
+                  <p class="card-text">Enjoying Coder`s</p>
+                </div>
+              </div></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </center>
+    <canvas height="1" width="0"></canvas>
+    <center><h5>Copyright 2022 By Syeif Gamer1015</h5>
+    <p>Made In Indonesia ❤️</p></center>
+  </div>
+  <!-- import js -->
+  <script src="./styles/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+  <script src="./script/main.js"></script>
+</body>
+</html>
