@@ -242,3 +242,10 @@
 .hobby-hidden {
   opacity: 0;
 }
+
+.hobby {
+  width: auto;
+  scroll-behavior: smooth;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
