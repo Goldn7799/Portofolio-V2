@@ -121,24 +121,24 @@ const sidebar = ()=>{
 
 //animation
 // Remove the transition class
-const anim = document.querySelector('.anims');
-anim.classList.remove('anim-show');
+const anim = document.querySelector('.about-anim');
+anim.classList.remove('about-show');
 
 // Create the observer, same as before:
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      anim.classList.add('anim-show');
-      anim.classList.remove('anim-hidden');
+      anim.classList.add('about-show');
+      anim.classList.remove('about-hidden');
       return;
     }
 
-    anim.classList.add('anim-hidden');
-    anim.classList.remove('anim-show');
+    anim.classList.add('about-hidden');
+    anim.classList.remove('about-show');
   });
 });
 
-observer.observe(document.querySelector('.anim'));
+observer.observe(document.querySelector('.about'));
 
 // Remove the transition class
 const skill = document.querySelector('.skill-anim');

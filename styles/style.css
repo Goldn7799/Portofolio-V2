@@ -141,15 +141,15 @@
   max-width: 60rem;
 }
 
-.anim-show {
+.about-show {
   opacity: 1;
 }
 
-.anim-hidden {
+.about-hidden {
   opacity: 0;
 }
 
-.anims {
+.about-anim {
   transition: ease 2.5s;
   -webkit-transition: ease 2.5s;
   -moz-transition: ease 2.5s;
