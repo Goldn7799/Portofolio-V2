@@ -56,13 +56,58 @@ var text1 = "Iam Full Stack Developer"
 var text2 = "Coder`s Or Game`s?"
 var text3 = "YT : Syeif Gamer1015"
 var text4 = "Visit : syeifsultan.vercel.app"
+var sub1 = "Visit : github.com/Goldn7799"
+var sub2 = "Visit : syeifsultan.netlify.app"
 var text = text1;
 const desc = document.getElementById("desc");
+const cursor = document.getElementById("cursor-desc");
+const subsRun = ()=>{
+  const sub = setInterval(()=>{
+    if (lock){
+      key--;
+      desc.innerText = `${text.substring(0, key)}`;
+    }else {
+      key++;
+      desc.innerText = `${text.substring(0, key)}`;
+    };
+    if (key == text.length){
+      lock = true;
+      clearInterval(sub);
+      setTimeout(()=>{
+        subsRun()
+      }, 800)
+    };
+    if (key == 7){
+      lock = false;
+      if (text == sub1){
+        text = sub2;
+      }else if (text == sub2){
+        clearInterval(sub);
+        const subContiue = setInterval(()=>{
+          key--;
+          desc.innerText = `${text.substring(0, key)}`;
+          if (key == 0){
+            clearInterval(subContiue);
+            text = text1;
+            runs()
+          };
+        }, 100)
+      }else { console.log("err") }
+    };
+  }, 100)
+}
 const runs = ()=>{
   const start = setInterval(()=>{
     if(lock){
-      key--;
-      desc.innerText = `${text.substring(0, key)}`;
+      if (text === text4&&key === 7){
+        clearInterval(start);
+        text = sub1;
+        lock = false;
+        subsRun();
+      }else {
+        key--;
+        desc.innerText = `${text.substring(0, key)}`;
+      }
     }else {
       key++;
       desc.innerText = `${text.substring(0, key)}`;
@@ -71,14 +116,26 @@ const runs = ()=>{
       lock = true;
       clearInterval(start)
       setTimeout(() => {
-        runs()
+        if(text == text1){
+          desc.classList.add("n-desc-block")
+          cursor.style.display = "none";
+          setTimeout(()=>{
+            key = 0;
+            lock = false;
+            text = text2;
+            desc.innerText = `${text.substring(0, key)}`;
+            cursor.style.display = "block";
+            setTimeout(()=>{
+              desc.classList.remove("n-desc-block")
+              runs()
+            }, 400)
+          }, 500)
+        }else { runs() }
       }, 800);
     };
     if (key == 0){
       lock = false;
-      if(text == text1){
-        text = text2;
-      }else if (text == text2){
+      if (text == text2){
         text = text3;
       }else if (text == text3){
         text = text4;

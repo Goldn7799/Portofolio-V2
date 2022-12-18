@@ -249,3 +249,7 @@
   overflow-y: hidden;
   overflow-x: scroll;
 }
+
+.n-desc-block {
+  background-color: rgb(7,100,212);
+}
